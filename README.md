@@ -63,11 +63,6 @@ type
 deno task start
 ```
 
-Para rodar as .env do projeto no localhost na Deco play
-```sh
-deno task play
-``````
-
 You should see the following output
 
 ```
@@ -88,6 +83,13 @@ To continue from here, you can [perform initial setup](#initial-setup),
 [understand folder structure](#understanding-folder-structure), learn how to
 create [common design patterns](#recipes) (components) and comply to
 [best practices](#best-practices)
+
+
+To run the project's .env on localhost on [Deco play](https://play.deco.cx/)
+
+```sh
+deno task play
+```
 
 ## Initial setup
 
