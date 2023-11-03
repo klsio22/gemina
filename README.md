@@ -16,7 +16,7 @@ This starter brings:
   <li>Home, product and listing pages</li>
   <li>Content editable via CMS</li>
   <li>A/B test compatible</li>
-  <li>Analytics</li>
+  <li>Analytic</li>
   <li>Integration with VTEX, Shopify and Oracle</li>
   <li>Minicart with
     <ul>
