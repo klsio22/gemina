@@ -12,6 +12,7 @@ export default {
       'stone-100': '#dadada',
       'white-matte': '#fffcfc',
       'dark-brown': '#5D4737',
+      'orange-extra-light': '#CCAE99'
     },
 
     extend: {

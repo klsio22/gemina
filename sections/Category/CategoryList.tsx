@@ -30,10 +30,11 @@ export interface Props {
 }
 
 function CardText(
-  { tag, label, description, alignment }: {
+  { tag, label, pricePromotion, priceOriginal, alignment }: {
     tag?: string;
     label?: string;
-    description?: string;
+    pricePromotion?: string;
+    priceOriginal?: string;
     alignment?: "center" | "left";
   },
 ) {
@@ -44,8 +45,13 @@ function CardText(
       }`}
     >
       {tag && <div class="text-sm text-primary">{tag}</div>}
-      {label && <h3 class="text-lg text-base-content">{label}</h3>}
-      {description && <div class="text-sm text-neutral">{description}</div>}
+      {label && <h3 class="text-lg text-2xl font-quattrocento text-left">{label}</h3>}
+      <div class="flex flex-nowrap space-x-4">
+        {pricePromotion && 
+        <div class="text-2xl font-bold font-cinzel text-left float-right col-span-1">{pricePromotion}</div>}
+        {priceOriginal && 
+        <div class="text-2xl font-bold font-cinzel text-left float-left col-span-2 text-orange-extra-light">{priceOriginal}</div>}
+      </div>
     </div>
   );
 }
@@ -59,13 +65,14 @@ function CategoryList(props: Props) {
     },
     list = [
       {
-        tag: "10% off",
-        label: "Feminino",
-        description: "Moda feminina direto de Milão",
-        href: "/feminino",
+        tag: "",
+        label: "",
+        pricePromotion: "",
+        priceOriginal: "",
+        href: "",
         image:
-          "https://ik.imagekit.io/decocx/tr:w-680,h-680/https:/ozksgdmyrqcxcwhnbepg.supabase.co/storage/v1/object/public/assets/239/fdcb3c8f-d629-485e-bf70-8060bd8a9f65",
-        buttonText: "Ver produtos",
+          "",
+        buttonText: "",
       },
     ],
     layout = {
@@ -90,7 +97,7 @@ function CategoryList(props: Props) {
 
       <Slider class="carousel carousel-start gap-4 lg:gap-8 row-start-2 row-end-5">
         {list.map((
-          { tag, label, description, href, image, buttonText },
+          { tag, label, pricePromotion, priceOriginal, href, image, buttonText },
           index,
         ) => (
           <Slider.Item
@@ -99,36 +106,38 @@ function CategoryList(props: Props) {
           >
             <a
               href={href}
-              class="flex flex-col gap-4 lg:w-[280px] w-40 lg:h-auto"
+              class="flex flex-col gap-4 lg:w-[464px] w-40 lg:h-auto"
             >
-              {layout.categoryCard?.textPosition === "top" &&
-                (
-                  <CardText
-                    tag={tag}
-                    label={label}
-                    description={description}
-                    alignment={layout?.categoryCard?.textAlignment}
-                  />
-                )}
               {image &&
                 (
                   <figure>
                     <Image
                       class="card w-full"
                       src={image}
-                      alt={description || label || tag}
-                      width={160}
-                      height={195}
+                      alt={pricePromotion || priceOriginal || label || tag}
+                      width={464}
+                      height={464}
                       loading="lazy"
                     />
                   </figure>
+                )}
+              {layout.categoryCard?.textPosition === "top" &&
+                (
+                  <CardText
+                    tag={tag}
+                    label={label}
+                    pricePromotion={pricePromotion}
+                    priceOriginal={priceOriginal}
+                    alignment={layout?.categoryCard?.textAlignment}
+                  />
                 )}
               {layout.categoryCard?.textPosition === "bottom" &&
                 (
                   <CardText
                     tag={tag}
                     label={label}
-                    description={description}
+                    pricePromotion={pricePromotion}
+                    priceOriginal={priceOriginal}
                     alignment={layout?.categoryCard?.textAlignment}
                   />
                 )}
