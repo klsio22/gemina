@@ -226,11 +226,6 @@
             ]
           }
         ]
-      },
-      {
-        "url": "/linktree",
-        "name": "Link Tree",
-        "@type": "SiteNavigationElement"
       }
     ],
     "__resolveType": "commerce/loaders/navbar.ts"
@@ -1572,38 +1567,38 @@
     }
   },
   "Header - 01": {
+    "__resolveType": "deco-sites/storefront/sections/Header/Header.tsx",
+    "alerts": [
+      "Use this template to create your store at deco.cx"
+    ],
+    "searchbar": {
+      "placeholder": "What are you looking for?",
+      "action": "/s",
+      "name": "q",
+      "loader": {
+        "data": {
+          "__resolveType": "algolia/loaders/product/suggestions.ts",
+          "count": 4,
+          "highlight": true
+        },
+        "__resolveType": "resolved"
+      }
+    },
+    "navItems": {
+      "__resolveType": "navbar"
+    },
     "cart": {
       "freeShippingObjectiveQuantity": 600
     },
     "logo": {
-      "alt": "Fashion logo by deco",
-      "src": "https://ozksgdmyrqcxcwhnbepg.supabase.co/storage/v1/object/public/assets/239/50f36c94-fb4a-4a46-aaec-ebddf61c563c"
-    },
-    "alerts": [
-      "Use this template to create your store at deco.cx"
-    ],
-    "navItems": {
-      "__resolveType": "navbar"
+      "alt": "Logo Gemina teste",
+      "src": "data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTY0IiBoZWlnaHQ9IjI1IiB2aWV3Qm94PSIwIDAgMTY0IDI1IiBmaWxsPSJub25lIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciPgo8cGF0aCBkPSJNMTIuMDMyNyAyNC45OTkyQzUuMjI1NjcgMjQuOTk5MiAwIDIwLjMzMzUgMCAxMi41Njg0QzAgNC43MzQ3OCA1LjI2IDAgMTIuMTUzMyAwQzE2LjYyMjUgMCAyMC40NTU4IDEuOTYyNzQgMjIuNTUyNSA1LjY4MTVMMTkuNTI3MiA3LjI5OTg0QzE3Ljk5NzMgNC40NDE4NiAxNS4yNjQyIDMuMTE2MTcgMTIuMTUyOSAzLjExNjE3QzcuMjM2NzkgMy4xMTYxNyAzLjQzNzkzIDYuNDU2MjUgMy40Mzc5MyAxMi40OTk3QzMuNDM3OTMgMTguNDU2NyA3LjE1MDg5IDIxLjkxNzYgMTIuMjczMiAyMS45MTc2QzE2LjM5ODcgMjEuOTE3NiAxOS42MzAzIDE5LjU5MzQgMjAuMTk3NiAxNC45NzkzSDEyLjI1NjFWMTIuMTIxM0gyMy41MTUyVjI0LjY3MkgyMC43MzA1VjIwLjI5OUMxOS4xMzE4IDIzLjI3NzUgMTYuMTIzOCAyNC45OTkyIDEyLjAzMjcgMjQuOTk5MlpNNDguMDQwNSAzLjQwOTU0SDM4LjMxMVYxMC45ODQ5SDQ2Ljg4ODVWMTQuMDQ5NUgzOC4zMTFWMjEuNTczM0g0OC4wNDA1VjI0LjY3MjNIMzQuODIxNFYwLjMyODAxM0g0OC4wNDA1VjMuNDA5NTRaTTg0Ljk5MzEgMjQuNjcyMUg4MS42NDEyTDgwLjA0MjYgNC44NzI4M0w3Mi41MzA4IDI0LjY3MjFINzAuNDUwOEw2Mi45OTA2IDQuOTQxNThMNjEuMzU3NiAyNC42NzIxSDU3Ljk4ODVMNTkuODYyMSAwLjMyNzgzN0g2NC40ODYxTDcxLjQ4MjEgMTguNzMyNkw3OC41MTI2IDAuMzI3ODM3SDgzLjEzNjZMODQuOTkzMSAyNC42NzIxWk05Ni41NDAyIDI0LjY3MjFWMC4zMjc4MzdIOTkuOTYwOVYyNC42NzIxSDk2LjU0MDJaTTEyOC44MzUgMC4zMjc4MzdIMTMyLjIzOVYyNC42NzIxSDEyOC41NDNMMTE1Ljg0IDUuMzU1MDFWMjQuNjcyMUgxMTIuNDUzVjAuMzI3ODM3SDExNi4xMTVMMTI4LjgzNSAxOS41NTg1TDEyOC44MzUgMC4zMjc4MzdaTTE2MC40NDIgMjQuNjcyMUwxNTguNDEzIDE4Ljk5MDZIMTQ3LjU0OUwxNDUuNTIxIDI0LjY3MjFIMTQxLjk2M0wxNTAuOTE5IDAuMzI3ODM3SDE1NS4wNDRMMTY0IDI0LjY3MjFIMTYwLjQ0MlpNMTQ4LjYxNiAxNS45OTQ4SDE1Ny4zNDhMMTUyLjk4MiAzLjcxOTEzTDE0OC42MTYgMTUuOTk0OFoiIGZpbGw9IiNGNUY1RjUiLz4KPC9zdmc+Cg=="
     },
     "products": [],
-    "searchbar": {
-      "name": "q",
-      "action": "/s",
-      "loader": {
-        "data": {
-          "count": 4,
-          "highlight": true,
-          "__resolveType": "algolia/loaders/product/suggestions.ts"
-        },
-        "__resolveType": "resolved"
-      },
-      "placeholder": "What are you looking for?"
-    },
     "suggestions": {
       "products": [],
       "searches": []
-    },
-    "__resolveType": "deco-sites/storefront/sections/Header/Header.tsx"
+    }
   },
   "SEO Default": {
     "type": "website",
@@ -1747,33 +1742,10 @@
         "action": {
           "href": "https://www.deco.cx/",
           "label": "deco.cx",
-          "title": "VTEX Store",
-          "subTitle": "Visit our site and start building now:"
+          "title": "Elegância em Descontos NA Black Friday!"
         },
         "mobile": "https://ozksgdmyrqcxcwhnbepg.supabase.co/storage/v1/object/public/assets/239/24278f9e-412d-4a8a-b2d3-57353bb1b368",
         "desktop": "https://ozksgdmyrqcxcwhnbepg.supabase.co/storage/v1/object/public/assets/2291/96e58473-71aa-4419-af42-7d1a3d66b1ae"
-      },
-      {
-        "alt": "/feminino",
-        "action": {
-          "href": "https://www.deco.cx/",
-          "label": "deco.cx",
-          "title": "VTEX Store",
-          "subTitle": "Visit our site and start building now:"
-        },
-        "mobile": "https://ozksgdmyrqcxcwhnbepg.supabase.co/storage/v1/object/public/assets/239/eeaa624c-a3e1-45e8-a6fe-034233cfbcd0",
-        "desktop": "https://ozksgdmyrqcxcwhnbepg.supabase.co/storage/v1/object/public/assets/239/7949d031-9a79-4639-b85e-62fd90af85a9"
-      },
-      {
-        "alt": "/feminino",
-        "action": {
-          "href": "https://www.deco.cx/",
-          "label": "deco.cx",
-          "title": "VTEX Store",
-          "subTitle": "Visit our site and start building now:"
-        },
-        "mobile": "https://ozksgdmyrqcxcwhnbepg.supabase.co/storage/v1/object/public/assets/239/ae89571c-4a7c-44bf-9aeb-a341fd049d19",
-        "desktop": "https://ozksgdmyrqcxcwhnbepg.supabase.co/storage/v1/object/public/assets/239/7ec121e4-5cfe-4b7b-b942-d1ed4493803d"
       }
     ],
     "preload": true,
@@ -2692,8 +2664,7 @@
     "__resolveType": "deco-sites/storefront/sections/Miscellaneous/CampaignTimer.tsx"
   },
   "pages-home-c4bcbfb771e9": {
-    "name": "Home",
-    "path": "/",
+    "__resolveType": "website/pages/Page.tsx",
     "sections": [
       {
         "__resolveType": "website/sections/Seo/Seo.tsx"
@@ -2708,33 +2679,10 @@
             "action": {
               "href": "https://www.deco.cx/",
               "label": "deco.cx",
-              "title": "VTEX Store",
-              "subTitle": "Visit our site and start building now:"
+              "title": "Elegância em Descontos NA Black Friday!"
             },
             "mobile": "https://ozksgdmyrqcxcwhnbepg.supabase.co/storage/v1/object/public/assets/239/24278f9e-412d-4a8a-b2d3-57353bb1b368",
-            "desktop": "https://ozksgdmyrqcxcwhnbepg.supabase.co/storage/v1/object/public/assets/2291/96e58473-71aa-4419-af42-7d1a3d66b1ae"
-          },
-          {
-            "alt": "/feminino",
-            "action": {
-              "href": "https://www.deco.cx/",
-              "label": "deco.cx",
-              "title": "VTEX Store",
-              "subTitle": "Visit our site and start building now:"
-            },
-            "mobile": "https://ozksgdmyrqcxcwhnbepg.supabase.co/storage/v1/object/public/assets/239/eeaa624c-a3e1-45e8-a6fe-034233cfbcd0",
-            "desktop": "https://ozksgdmyrqcxcwhnbepg.supabase.co/storage/v1/object/public/assets/239/7949d031-9a79-4639-b85e-62fd90af85a9"
-          },
-          {
-            "alt": "/feminino",
-            "action": {
-              "href": "https://www.deco.cx/",
-              "label": "deco.cx",
-              "title": "VTEX Store",
-              "subTitle": "Visit our site and start building now:"
-            },
-            "mobile": "https://ozksgdmyrqcxcwhnbepg.supabase.co/storage/v1/object/public/assets/239/ae89571c-4a7c-44bf-9aeb-a341fd049d19",
-            "desktop": "https://ozksgdmyrqcxcwhnbepg.supabase.co/storage/v1/object/public/assets/239/7ec121e4-5cfe-4b7b-b942-d1ed4493803d"
+            "desktop": "data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTQ0MCIgaGVpZ2h0PSI4NjkiIHZpZXdCb3g9IjAgMCAxNDQwIDg2OSIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPGcgY2xpcC1wYXRoPSJ1cmwoI2NsaXAwXzMzMl80NTMpIj4KPHJlY3Qgd2lkdGg9IjE0NDAiIGhlaWdodD0iODY5IiBmaWxsPSIjMjEyMTIxIi8+CjxyZWN0IHg9IjEwMjkiIHk9IjQxOCIgd2lkdGg9IjcwOCIgaGVpZ2h0PSI2NjciIHJ4PSIyNjAiIGZpbGw9InVybCgjcGFpbnQwX3JhZGlhbF8zMzJfNDUzKSIvPgo8cmVjdCB4PSItMzY2IiB5PSIyMjkiIHdpZHRoPSI1OTUiIGhlaWdodD0iNTg2IiByeD0iMjYwIiBmaWxsPSJ1cmwoI3BhaW50MV9yYWRpYWxfMzMyXzQ1MykiLz4KPC9nPgo8ZGVmcz4KPHJhZGlhbEdyYWRpZW50IGlkPSJwYWludDBfcmFkaWFsXzMzMl80NTMiIGN4PSIwIiBjeT0iMCIgcj0iMSIgZ3JhZGllbnRVbml0cz0idXNlclNwYWNlT25Vc2UiIGdyYWRpZW50VHJhbnNmb3JtPSJ0cmFuc2xhdGUoMTM4MyA3NTEuNSkgcm90YXRlKDkwKSBzY2FsZSgzMzMuNSAzNTQpIj4KPHN0b3Agc3RvcC1jb2xvcj0iIzVGNDgzOCIvPgo8c3RvcCBvZmZzZXQ9IjEiIHN0b3AtY29sb3I9IiM1RjQ4MzgiIHN0b3Atb3BhY2l0eT0iMCIvPgo8L3JhZGlhbEdyYWRpZW50Pgo8cmFkaWFsR3JhZGllbnQgaWQ9InBhaW50MV9yYWRpYWxfMzMyXzQ1MyIgY3g9IjAiIGN5PSIwIiByPSIxIiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSIgZ3JhZGllbnRUcmFuc2Zvcm09InRyYW5zbGF0ZSgtNjguNSA1MjIpIHJvdGF0ZSg5MCkgc2NhbGUoMjkzIDI5Ny41KSI+CjxzdG9wIHN0b3AtY29sb3I9IiM1RjQ4MzgiLz4KPHN0b3Agb2Zmc2V0PSIxIiBzdG9wLWNvbG9yPSIjNUY0ODM4IiBzdG9wLW9wYWNpdHk9IjAiLz4KPC9yYWRpYWxHcmFkaWVudD4KPGNsaXBQYXRoIGlkPSJjbGlwMF8zMzJfNDUzIj4KPHJlY3Qgd2lkdGg9IjE0NDAiIGhlaWdodD0iODY5IiBmaWxsPSJ3aGl0ZSIvPgo8L2NsaXBQYXRoPgo8L2RlZnM+Cjwvc3ZnPgo="
           }
         ],
         "preload": true,
@@ -2819,7 +2767,8 @@
         "__resolveType": "Footer - 01"
       }
     ],
-    "__resolveType": "website/pages/Page.tsx"
+    "name": "Home",
+    "path": "/"
   },
   "Product Card Layout - 01": {
     "layout": {

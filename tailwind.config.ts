@@ -9,8 +9,8 @@ export default {
     colors: {
       'stone-500': '#121214',
       'orange-light': '#D56F25',
-      'stone-100': '#DADADA',
-      'white-matte': 'FFFCFC',
+      'stone-100': '#dadada',
+      'white-matte': '#fffcfc',
       'dark-brown': '#5D4737',
     },
 
