@@ -7,7 +7,7 @@ export default {
   theme: {
     container: { center: true },
     colors: {
-      'stone-500': '#121214',
+      'stone-500': '#212121',
       'orange-light': '#D56F25',
       'stone-100': '#dadada',
       'white-matte': '#fffcfc',

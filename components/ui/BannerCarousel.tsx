@@ -1,7 +1,6 @@
 import { useId } from '$store/sdk/useId.ts';
 import type { ImageWidget } from 'apps/admin/widgets.ts';
 import { Picture, Source } from 'apps/website/components/Picture.tsx';
-import { relative } from 'std/path/win32.ts';
 
 /**
  * @titleBy alt
@@ -34,12 +33,17 @@ export interface HighlightImages {
     /** @description Image text title */
   };
 }
+
+export interface SiteNavigationElement {
+  name: string;
+  url: string;
+}
+
 export interface Props {
   images?: Banner[];
 
-  imagesBanners?: HighlightImages[];
+  links: SiteNavigationElement[];
 
-  textTitle?: string;
   /**
    * @description Check this option when this banner is the biggest image on the screen for image optimizations
    */
@@ -122,38 +126,8 @@ function BannerItem({ image, lcp }: { image: Banner; lcp?: boolean }) {
   );
 }
 
-function BannersPhotos({
-  image,
-  lcp,
-}: {
-  image: HighlightImages;
-  lcp?: boolean;
-}) {
-  const { alt, desktop } = image;
-
-  return (
-    <div className='hidden md:flex'>
-      <Picture>
-        <Source
-          media='(min-width: 768px)'
-          src={desktop}
-          fetchPriority={lcp ? 'high' : 'auto'}
-          width={1440}
-          height={600}
-        />
-        <img
-          className='object-cover w-full h-full'
-          loading={lcp ? 'eager' : 'lazy'}
-          src={desktop}
-          alt={alt}
-        />
-      </Picture>
-    </div>
-  );
-}
-
 function BannerCarousel(props: Props) {
-  const { images, imagesBanners, textTitle, preload } = {
+  const { images, preload, links } = {
     ...DEFAULT_PROPS,
     ...props,
   };
@@ -169,21 +143,17 @@ function BannerCarousel(props: Props) {
         {images?.map((image, index) => (
           <BannerItem image={image} lcp={index === 0 && preload} />
         ))}
-      </div>
 
-      <div className='absolute right-12 top-1/3'>
-        <div>
-          <div className='flex gap-10'>
-            {imagesBanners?.map((image, index) => (
-              <BannersPhotos image={image} lcp={index === 0 && preload} />
-            ))}
-          </div>
-
-          <div className='w-7'>
-            <span className='font-quattrocento font-normal text-xl text-white-matte uppercase'>
-              {textTitle}
-            </span>
-          </div>
+        <div className='absolute top-[80%] left-8'>
+          {links.map((item) => (
+            <li className='group flex items-center '>
+              <a href={item.url} className='px-4 py-3'>
+                <span className='group-hover:underline text-base text-white-matte'>
+                  {item.name}
+                </span>
+              </a>
+            </li>
+          ))}
         </div>
       </div>
     </div>
