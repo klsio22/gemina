@@ -144,7 +144,7 @@ function BannerCarousel(props: Props) {
           <BannerItem image={image} lcp={index === 0 && preload} />
         ))}
 
-        <div className='absolute top-[80%] left-8'>
+        <div className='absolute top-[80%] left-10'>
           {links.map((item) => (
             <li className='group flex items-center '>
               <a href={item.url} className='px-4 py-3'>
