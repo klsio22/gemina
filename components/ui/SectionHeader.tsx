@@ -34,7 +34,7 @@ function Header(props: Props) {
             {props.description &&
               (
                 <h2
-                  class={`text-6xl pb-11
+                  class={`text-6xl pb-32
                   leading-6 lg:leading-8 font-light  uppercase font-cinzel text-stone-50`}
                 >
                   {props.description}
